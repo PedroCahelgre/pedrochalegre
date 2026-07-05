@@ -18,21 +18,19 @@ export function Expertise() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.16),transparent_45%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1400px] px-5 py-20 sm:px-6 sm:py-28 md:px-10 md:py-40">
-        <div className="grid gap-10 sm:gap-16 md:grid-cols-[1fr_1.4fr] md:items-center">
-          {/* ── Left: text ── */}
+      <div className="relative z-10 mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-28 md:px-10 md:py-40">
+        <div className="grid gap-12 sm:gap-16 md:grid-cols-[1fr_1.4fr] md:items-center">
           <header>
             <span className="section-index">Capítulo 02</span>
-            <h2 className="mt-4 font-display text-[clamp(2.6rem,8vw,8.5rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
+            <h2 className="mt-4 font-display text-[clamp(2.4rem,8vw,8.5rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
               Especialidades
             </h2>
-            <p className="mt-6 max-w-sm text-sm leading-7 text-white/55 sm:mt-8 sm:text-base sm:leading-8">
+            <p className="mt-6 max-w-sm text-[15px] leading-7 text-white/55 sm:mt-8 sm:text-base sm:leading-8">
               Tecnologias utilizadas para construir aplicações modernas, escaláveis e de alta performance.
             </p>
           </header>
 
-          {/* ── Right: cards ── */}
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
             {skillGroups.map((group, i) => (
               <article
                 key={group.title}
@@ -40,12 +38,12 @@ export function Expertise() {
               >
                 <div className="glass-card__inner">
                   <div className="flex items-baseline justify-between">
-                    <h3 className="font-display text-lg font-normal tracking-[-0.01em] text-white">
+                    <h3 className="font-display text-base font-normal tracking-[-0.01em] text-white sm:text-lg">
                       {group.title}
                     </h3>
-                    <span className="font-mono text-[11px] text-blue-400/70">{group.index}</span>
+                    <span className="font-mono text-[10px] text-blue-400/70 sm:text-[11px]">{group.index}</span>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
                     {group.skills.map((skill) => (
                       <span key={skill} className="skill-token">
                         {skill}

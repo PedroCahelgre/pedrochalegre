@@ -22,7 +22,6 @@ export function Hero() {
     video.loop = false;
     video.style.cssText = "position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform;transform:translateZ(0);";
 
-    // ── Scrub video on scroll ──
     let duration = 0;
     let lastSeek = 0;
     let targetTime = 0;
@@ -64,7 +63,6 @@ export function Hero() {
       video.addEventListener("loadedmetadata", onDuration, { once: true });
     }
 
-    // ── Content animations ──
     gsap.utils.toArray<HTMLElement>(".hero-split").forEach(splitToChars);
 
     const intro = gsap.timeline();
@@ -97,21 +95,21 @@ export function Hero() {
         <div className="chapter-grade" aria-hidden="true" />
         <div className="hero-wash pointer-events-none absolute inset-0 opacity-0" aria-hidden="true" />
 
-        <div className="hero-copy-block absolute inset-x-0 bottom-[9vh] z-10 mx-auto max-w-[1400px] px-5 sm:px-6 md:bottom-[11vh] md:px-10">
+        <div className="hero-copy-block absolute inset-x-0 bottom-[8vh] z-10 mx-auto max-w-[1400px] px-5 sm:px-8 md:bottom-[11vh] md:px-10">
           <span className="hero-badge chip">
             <span className="chip__dot" /> Full Stack Developer
           </span>
 
-          <h1 className="hero-title hero-split mt-5 font-display text-[clamp(2.4rem,11vw,14rem)] font-light leading-[0.82] tracking-[-0.03em] text-white sm:mt-7">
+          <h1 className="hero-title hero-split mt-5 font-display text-[clamp(2.2rem,10vw,14rem)] font-light leading-[0.82] tracking-[-0.03em] text-white sm:mt-7">
             Pedro Chalegre
           </h1>
 
-          <div className="mt-6 grid gap-6 sm:mt-8 sm:gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-end">
-            <h2 className="hero-fade max-w-2xl font-display text-[clamp(1.2rem,3.4vw,3.2rem)] font-light italic leading-[1.02] tracking-[-0.02em] text-white/92">
+          <div className="mt-5 grid gap-5 sm:mt-8 sm:gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-end">
+            <h2 className="hero-fade max-w-2xl font-display text-[clamp(1.1rem,3.2vw,3.2rem)] font-light italic leading-[1.05] tracking-[-0.02em] text-white/92">
               Transformando ideias em experiências digitais de alta performance.
             </h2>
-            <div className="hero-fade space-y-5 sm:space-y-6 md:pb-2">
-              <p className="max-w-md text-[14px] leading-6 text-white/60 sm:text-[15px] sm:leading-7">
+            <div className="hero-fade space-y-4 sm:space-y-6 md:pb-2">
+              <p className="max-w-md text-[15px] leading-7 text-white/60">
                 Desenvolvedor Full Stack especializado na criação de aplicações modernas, interfaces sofisticadas e
                 experiências digitais que unem performance, design e inovação.
               </p>
@@ -125,8 +123,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero-scroll-cue pointer-events-none absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-white/45">Rolar</span>
+        <div className="hero-scroll-cue pointer-events-none absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 sm:bottom-6">
+          <span className="text-[9px] uppercase tracking-[0.4em] text-white/45 sm:text-[10px]">Rolar</span>
           <span className="scroll-line" />
         </div>
       </div>
