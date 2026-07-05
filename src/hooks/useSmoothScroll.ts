@@ -13,6 +13,8 @@ export function getLenis() {
 
 export function useSmoothScroll() {
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
