@@ -68,7 +68,7 @@ export function Nav() {
           </div>
 
           <button
-            className="relative z-[110] flex h-11 w-11 items-center justify-center md:hidden"
+            className="relative z-[100] flex h-11 w-11 items-center justify-center md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           >
@@ -101,11 +101,21 @@ export function Nav() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex h-16 items-center px-5">
+        <div className="flex h-16 items-center justify-between px-5">
           <a href="#hero" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
             <img src="/logo.jpeg" alt="PC" className="h-8 w-8 rounded object-cover" />
             <span className="font-display text-sm tracking-[-0.01em]">Pedro Chalegre</span>
           </a>
+          <button
+            className="flex h-11 w-11 items-center justify-center"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Fechar menu"
+          >
+            <span className="flex h-5 w-5 flex-col items-center justify-center gap-[5px]">
+              <span className="h-[1.5px] w-5 rotate-45 translate-y-[3.25px] bg-white" />
+              <span className="h-[1.5px] w-5 -rotate-45 -translate-y-[3.25px] bg-white" />
+            </span>
+          </button>
         </div>
 
         <div className="flex flex-1 flex-col justify-center px-8">
