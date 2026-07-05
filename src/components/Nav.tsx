@@ -67,7 +67,7 @@ export function Nav() {
         </div>
 
         <button
-          className="relative z-[60] flex h-11 w-11 items-center justify-center md:hidden"
+          className="relative z-[95] flex h-11 w-11 items-center justify-center md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
         >
@@ -93,10 +93,10 @@ export function Nav() {
       </nav>
 
       <div
-        className={`fixed inset-0 z-50 flex flex-col bg-[#0a0a0a] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden ${
+        className={`fixed inset-0 z-[90] flex flex-col bg-black transition-opacity duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden ${
           menuOpen
-            ? "opacity-100 pointer-events-auto translate-y-0"
-            : "opacity-0 pointer-events-none -translate-y-2"
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         <div className="flex h-16 items-center justify-between px-5">
