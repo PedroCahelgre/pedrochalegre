@@ -66,6 +66,9 @@ export function Hero() {
       video.addEventListener("loadedmetadata", onDuration, { once: true });
     }
 
+    // ── Split text to chars for animation ──
+    gsap.utils.toArray<HTMLElement>(".hero-split").forEach(splitToChars);
+
     // Refresh ScrollTrigger on resize / orientation change
     const refreshTrigger = () => ScrollTrigger.refresh();
     window.addEventListener("resize", refreshTrigger);
