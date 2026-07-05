@@ -111,7 +111,9 @@ export function Nav() {
                 transitionDelay: menuOpen ? `${i * 80}ms` : "0ms",
                 opacity: menuOpen ? 1 : 0,
                 transform: menuOpen ? "translateY(0)" : "translateY(20px)",
-                transition: "opacity 0.3s ease, transform 0.3s ease, color 0.3s ease",
+                transitionProperty: "opacity, transform, color",
+                transitionDuration: "0.3s",
+                transitionTimingFunction: "ease",
               }}
               onClick={() => setMenuOpen(false)}
             >
@@ -125,7 +127,9 @@ export function Nav() {
               transitionDelay: menuOpen ? `${links.length * 80}ms` : "0ms",
               opacity: menuOpen ? 1 : 0,
               transform: menuOpen ? "translateY(0)" : "translateY(20px)",
-              transition: "opacity 0.3s ease, transform 0.3s ease, background 0.3s ease",
+              transitionProperty: "opacity, transform, background",
+              transitionDuration: "0.3s",
+              transitionTimingFunction: "ease",
             }}
             onClick={() => setMenuOpen(false)}
           >
