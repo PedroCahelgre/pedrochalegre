@@ -93,16 +93,16 @@ export function Cta() {
         <Particles fixed={false} />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1400px] flex-col justify-center px-6 py-32 md:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1400px] flex-col justify-center px-5 py-24 sm:px-6 sm:py-32 md:px-10">
         <span className="section-index">Capítulo 05 — Vamos Construir</span>
-        <h2 className="cta-title cta-split mt-6 max-w-5xl font-display text-[clamp(2.8rem,8vw,8.5rem)] font-light leading-[0.9] tracking-[-0.03em] text-white">
+        <h2 className="cta-title cta-split mt-5 max-w-5xl font-display text-[clamp(2rem,8vw,8.5rem)] font-light leading-[0.9] tracking-[-0.03em] text-white sm:mt-6">
           Vamos construir o seu próximo projeto.
         </h2>
-        <p className="cta-fade mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
+        <p className="cta-fade mt-6 max-w-2xl text-base leading-7 text-white/72 sm:mt-8 sm:text-lg sm:leading-8 md:text-xl">
           Estou disponível para desenvolver aplicações modernas, landing pages premium, sistemas completos e
           experiências digitais de alto impacto.
         </p>
-        <div className="cta-actions cta-fade mt-10 flex flex-col gap-3 sm:flex-row">
+        <div className="cta-actions cta-fade mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:flex sm:flex-row">
           <MagneticButton href={SOCIAL.whatsapp} external variant="primary">
             WhatsApp
           </MagneticButton>

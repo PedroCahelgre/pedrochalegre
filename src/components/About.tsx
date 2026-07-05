@@ -93,13 +93,13 @@ export function About() {
 
   return (
     <section ref={ref} id="about" className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1400px] gap-14 px-6 py-28 md:grid-cols-[1fr_0.9fr] md:items-center md:px-10 md:py-40">
+      <div className="relative mx-auto grid max-w-[1400px] gap-10 px-5 py-20 sm:px-6 sm:py-28 md:grid-cols-[1fr_0.9fr] md:items-center md:gap-14 md:px-10 md:py-40">
         <div className="about-copy">
           <span className="section-index">Capítulo 04 — Sobre</span>
-          <h2 className="about-title about-split mt-5 font-display text-[clamp(2.6rem,6vw,6rem)] font-light leading-[0.9] tracking-[-0.03em] text-white">
+          <h2 className="about-title about-split mt-5 font-display text-[clamp(2.2rem,6vw,6rem)] font-light leading-[0.9] tracking-[-0.03em] text-white">
             Sobre Mim
           </h2>
-          <div className="about-para mt-8 space-y-5 text-xl leading-9 text-white/72 md:text-2xl md:leading-[1.55]">
+          <div className="about-para mt-6 space-y-4 text-lg leading-8 text-white/72 sm:mt-8 sm:space-y-5 sm:text-xl sm:leading-9 md:text-2xl md:leading-[1.55]">
             <p>
               Sou um Desenvolvedor Full Stack com 4 anos de experiência, com foco principal em desenvolvimento Frontend
               (70%) e sólidos conhecimentos em Backend (30%).
@@ -111,7 +111,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3">
+          <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:mt-14 sm:gap-x-8 sm:gap-y-10 md:grid-cols-3">
             {metrics.map((m) => (
               <div className="metric" key={m.label}>
                 {m.word ? (

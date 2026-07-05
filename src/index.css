@@ -141,6 +141,16 @@ body {
   backdrop-filter: none;
   border-bottom-color: rgba(255, 255, 255, 0.07);
 }
+
+@media (max-width: 767px) {
+  .nav-shell--hero,
+  .nav-shell--mid,
+  .nav-shell.is-scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
 .nav-brand {
   display: flex;
   flex-direction: column;
@@ -527,6 +537,7 @@ body {
 .proj-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 12px 22px;
   border-radius: 999px;
@@ -536,6 +547,7 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #fff;
+  text-align: center;
   transition:
     background 0.4s ease,
     box-shadow 0.4s ease,
@@ -553,6 +565,12 @@ body {
 .proj-btn.ghost:hover {
   border-color: rgba(255, 255, 255, 0.5);
   box-shadow: none;
+}
+@media (max-width: 639px) {
+  .proj-btn {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 /* ---------- About ---------- */
@@ -652,6 +670,11 @@ body {
   }
   .magnetic {
     width: 100%;
+  }
+}
+@media (min-width: 640px) {
+  .magnetic {
+    width: auto;
   }
 }
 

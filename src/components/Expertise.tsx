@@ -18,15 +18,15 @@ export function Expertise() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.16),transparent_45%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
-        <div className="grid gap-16 md:grid-cols-[1fr_1.4fr] md:items-center">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-5 py-20 sm:px-6 sm:py-28 md:px-10 md:py-40">
+        <div className="grid gap-10 sm:gap-16 md:grid-cols-[1fr_1.4fr] md:items-center">
           {/* ── Left: text ── */}
           <header>
             <span className="section-index">Capítulo 02</span>
-            <h2 className="mt-4 font-display text-[clamp(4rem,8vw,8.5rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
+            <h2 className="mt-4 font-display text-[clamp(2.6rem,8vw,8.5rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
               Especialidades
             </h2>
-            <p className="mt-8 max-w-sm text-base leading-8 text-white/55">
+            <p className="mt-6 max-w-sm text-sm leading-7 text-white/55 sm:mt-8 sm:text-base sm:leading-8">
               Tecnologias utilizadas para construir aplicações modernas, escaláveis e de alta performance.
             </p>
           </header>

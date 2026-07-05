@@ -97,21 +97,21 @@ export function Hero() {
         <div className="chapter-grade" aria-hidden="true" />
         <div className="hero-wash pointer-events-none absolute inset-0 opacity-0" aria-hidden="true" />
 
-        <div className="hero-copy-block absolute inset-x-0 bottom-[9vh] z-10 mx-auto max-w-[1400px] px-6 md:bottom-[11vh] md:px-10">
+        <div className="hero-copy-block absolute inset-x-0 bottom-[9vh] z-10 mx-auto max-w-[1400px] px-5 sm:px-6 md:bottom-[11vh] md:px-10">
           <span className="hero-badge chip">
             <span className="chip__dot" /> Full Stack Developer
           </span>
 
-          <h1 className="hero-title hero-split mt-7 font-display text-[clamp(3.6rem,13vw,14rem)] font-light leading-[0.82] tracking-[-0.03em] text-white">
+          <h1 className="hero-title hero-split mt-5 font-display text-[clamp(2.4rem,11vw,14rem)] font-light leading-[0.82] tracking-[-0.03em] text-white sm:mt-7">
             Pedro Chalegre
           </h1>
 
-          <div className="mt-8 grid gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-end">
-            <h2 className="hero-fade max-w-2xl font-display text-[clamp(1.5rem,3.4vw,3.2rem)] font-light italic leading-[1.02] tracking-[-0.02em] text-white/92">
+          <div className="mt-6 grid gap-6 sm:mt-8 sm:gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-end">
+            <h2 className="hero-fade max-w-2xl font-display text-[clamp(1.2rem,3.4vw,3.2rem)] font-light italic leading-[1.02] tracking-[-0.02em] text-white/92">
               Transformando ideias em experiências digitais de alta performance.
             </h2>
-            <div className="hero-fade space-y-6 md:pb-2">
-              <p className="max-w-md text-[15px] leading-7 text-white/60">
+            <div className="hero-fade space-y-5 sm:space-y-6 md:pb-2">
+              <p className="max-w-md text-[14px] leading-6 text-white/60 sm:text-[15px] sm:leading-7">
                 Desenvolvedor Full Stack especializado na criação de aplicações modernas, interfaces sofisticadas e
                 experiências digitais que unem performance, design e inovação.
               </p>
