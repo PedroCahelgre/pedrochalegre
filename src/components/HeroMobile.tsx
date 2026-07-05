@@ -61,11 +61,11 @@ export function HeroMobile() {
         preload="metadata"
         autoPlay
         loop
-        className="absolute inset-0 h-full w-full object-cover object-[center_15%]"
+        className="absolute inset-0 h-full w-full object-cover object-[center_5%]"
       />
       <div className="chapter-grade" aria-hidden="true" />
 
-      <div className="absolute inset-x-0 bottom-0 top-[42%] z-10 mx-auto flex flex-col items-center justify-end pb-16 px-6 text-center">
+      <div className="absolute inset-x-0 bottom-0 top-[48%] z-10 mx-auto flex flex-col items-center justify-end pb-16 px-6 text-center">
         <span className="hero-badge chip">
           <span className="chip__dot" /> Full Stack Developer
         </span>
