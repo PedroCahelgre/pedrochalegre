@@ -27,7 +27,6 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -59,7 +58,6 @@ export function Nav() {
           </div>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden items-center gap-7 md:flex lg:gap-9">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="nav-link">
@@ -68,72 +66,90 @@ export function Nav() {
           ))}
         </div>
 
-        {/* Mobile: hamburger button */}
         <button
-          className="relative z-50 flex h-10 w-10 items-center justify-center md:hidden"
+          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 hover:bg-white/10 md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
         >
           <span className="sr-only">{menuOpen ? "Fechar" : "Menu"}</span>
-          <span
-            className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${
-              menuOpen ? "rotate-45 translate-y-0" : "-translate-y-2"
-            }`}
-          />
-          <span
-            className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${
-              menuOpen ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`absolute h-0.5 w-6 bg-white transition-all duration-300 ${
-              menuOpen ? "-rotate-45 translate-y-0" : "translate-y-2"
-            }`}
-          />
+          <span className="flex h-5 w-5 flex-col items-center justify-center gap-[5px]">
+            <span
+              className={`h-[1.5px] w-5 bg-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                menuOpen ? "translate-y-[3.25px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`h-[1.5px] w-5 bg-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                menuOpen ? "scale-x-0 opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`h-[1.5px] w-5 bg-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                menuOpen ? "-translate-y-[3.25px] -rotate-45" : ""
+              }`}
+            />
+          </span>
         </button>
       </nav>
 
-      {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-black/95 backdrop-blur-md transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-black/98 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden ${
           menuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col items-center gap-8">
+        <nav className="flex flex-col items-center gap-1">
           {links.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
-              className="font-display text-3xl font-light tracking-[-0.02em] text-white/80 transition-colors hover:text-white"
+              className="group relative flex items-center gap-4 overflow-hidden py-3"
               style={{
-                transitionDelay: menuOpen ? `${i * 80}ms` : "0ms",
+                transitionDelay: menuOpen ? `${100 + i * 60}ms` : "0ms",
                 opacity: menuOpen ? 1 : 0,
-                transform: menuOpen ? "translateY(0)" : "translateY(20px)",
-                transitionProperty: "opacity, transform, color",
-                transitionDuration: "0.3s",
-                transitionTimingFunction: "ease",
+                transform: menuOpen ? "translateY(0)" : "translateY(30px)",
+                transitionProperty: "opacity, transform",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
               }}
               onClick={() => setMenuOpen(false)}
             >
-              {l.label}
+              <span className="text-[10px] font-mono text-white/25 tabular-nums">
+                0{i + 1}
+              </span>
+              <span className="font-display text-[2rem] font-extralight tracking-[-0.03em] text-white/70 transition-colors duration-300 group-hover:text-white">
+                {l.label}
+              </span>
             </a>
           ))}
+
+          <div
+            style={{
+              transitionDelay: menuOpen ? `${100 + links.length * 60}ms` : "0ms",
+              opacity: menuOpen ? 1 : 0,
+              transform: menuOpen ? "translateY(0)" : "translateY(30px)",
+              transitionProperty: "opacity, transform",
+              transitionDuration: "0.4s",
+              transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
+            }}
+            className="mt-6 h-px w-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+          />
+
           <a
             href="#contact"
-            className="mt-4 rounded-full border border-blue-500/50 bg-blue-500/10 px-8 py-3 text-sm uppercase tracking-[0.2em] text-blue-400 transition-all hover:bg-blue-500/20"
+            className="mt-6 rounded-full border border-white/15 bg-white/5 px-8 py-3 text-xs uppercase tracking-[0.25em] text-white/60 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white"
             style={{
-              transitionDelay: menuOpen ? `${links.length * 80}ms` : "0ms",
+              transitionDelay: menuOpen ? `${100 + (links.length + 1) * 60}ms` : "0ms",
               opacity: menuOpen ? 1 : 0,
-              transform: menuOpen ? "translateY(0)" : "translateY(20px)",
-              transitionProperty: "opacity, transform, background",
-              transitionDuration: "0.3s",
-              transitionTimingFunction: "ease",
+              transform: menuOpen ? "translateY(0)" : "translateY(30px)",
+              transitionProperty: "opacity, transform, border-color, background, color",
+              transitionDuration: "0.4s",
+              transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
             }}
             onClick={() => setMenuOpen(false)}
           >
-            Contato
+            Fale Comigo
           </a>
         </nav>
       </div>
