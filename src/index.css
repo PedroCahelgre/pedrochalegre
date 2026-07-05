@@ -236,9 +236,11 @@ body {
 
 /* ---------- Hero bits (mobile-first) ---------- */
 .hero-badge,
-.hero-title .char,
 .hero-fade,
 .hero-scroll-cue {
+  opacity: 1;
+}
+.hero-title .char {
   opacity: 0;
 }
 .hero-video {
