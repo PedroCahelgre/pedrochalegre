@@ -6,7 +6,7 @@ const projects = [
   { name: 'atelier-premium', url: 'https://atelierpremium.netlify.app' },
   { name: 'grupolmb', url: 'https://grupolmb.com.br/' },
   { name: 'prlmb', url: 'https://prlmb.grupolmb.com.br/' },
-  { name: 'art-sapiens', url: 'https://testetatto2.netlify.app' },
+  { name: 'art-sapiens', url: 'https://artsapiens.com.br/' },
   { name: 'barbearia-meus-manos', url: 'https://barbeariameusmanos.vercel.app/' },
   { name: 'feijoadadaspretas', url: 'https://feijoadadaspretas.netlify.app/' },
   { name: 'gsap-scroll', url: 'https://testegeladeira.vercel.app/' },

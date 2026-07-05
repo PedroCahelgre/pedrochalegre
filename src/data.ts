@@ -113,7 +113,7 @@ export const projects: Project[] = [
     tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     year: "2026",
     image: "/art-sapiens.png",
-    live: "https://testetatto2.netlify.app",
+    live: "https://artsapiens.com.br/",
     github: "https://github.com/PedroCahelgre",
   },
   {
