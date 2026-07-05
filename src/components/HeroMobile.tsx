@@ -65,7 +65,7 @@ export function HeroMobile() {
       />
       <div className="chapter-grade" aria-hidden="true" />
 
-      <div className="absolute inset-x-0 top-[52%] z-10 mx-auto flex flex-col items-center px-6 text-center">
+      <div className="absolute inset-x-0 bottom-0 top-[52%] z-10 mx-auto flex flex-col items-center justify-center px-6 text-center">
         <span className="hero-badge chip">
           <span className="chip__dot" /> Full Stack Developer
         </span>
