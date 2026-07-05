@@ -139,6 +139,14 @@
       "openingHours": "Mo-Su 08:00-20:00"
     }
     </script>
+    <script>
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
