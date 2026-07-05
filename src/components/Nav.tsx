@@ -67,7 +67,7 @@ export function Nav() {
         </div>
 
         <button
-          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 hover:bg-white/10 md:hidden"
+          className="relative z-[60] flex h-11 w-11 items-center justify-center md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
         >
@@ -93,65 +93,73 @@ export function Nav() {
       </nav>
 
       <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-black/98 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden ${
+        className={`fixed inset-0 z-50 flex flex-col bg-[#0a0a0a] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden ${
           menuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            ? "opacity-100 pointer-events-auto translate-y-0"
+            : "opacity-0 pointer-events-none -translate-y-2"
         }`}
       >
-        <nav className="flex flex-col items-center gap-1">
-          {links.map((l, i) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="group relative flex items-center gap-4 overflow-hidden py-3"
-              style={{
-                transitionDelay: menuOpen ? `${100 + i * 60}ms` : "0ms",
-                opacity: menuOpen ? 1 : 0,
-                transform: menuOpen ? "translateY(0)" : "translateY(30px)",
-                transitionProperty: "opacity, transform",
-                transitionDuration: "0.4s",
-                transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
-              }}
-              onClick={() => setMenuOpen(false)}
-            >
-              <span className="text-[10px] font-mono text-white/25 tabular-nums">
-                0{i + 1}
-              </span>
-              <span className="font-display text-[2rem] font-extralight tracking-[-0.03em] text-white/70 transition-colors duration-300 group-hover:text-white">
-                {l.label}
-              </span>
-            </a>
-          ))}
+        <div className="flex h-16 items-center justify-between px-5">
+          <a href="#hero" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
+            <img src="/logo.jpeg" alt="PC" className="h-8 w-8 rounded object-cover" />
+            <span className="font-display text-sm tracking-[-0.01em]">Pedro Chalegre</span>
+          </a>
+        </div>
+
+        <div className="flex flex-1 flex-col justify-center px-8">
+          <nav className="flex flex-col gap-1">
+            {links.map((l, i) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="group flex items-baseline gap-4 py-3"
+                style={{
+                  transitionDelay: menuOpen ? `${80 + i * 50}ms` : "0ms",
+                  opacity: menuOpen ? 1 : 0,
+                  transform: menuOpen ? "translateX(0)" : "translateX(-20px)",
+                  transitionProperty: "opacity, transform",
+                  transitionDuration: "0.35s",
+                  transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
+                }}
+                onClick={() => setMenuOpen(false)}
+              >
+                <span className="text-[10px] font-mono text-white/20 tabular-nums">
+                  0{i + 1}
+                </span>
+                <span className="font-display text-2xl font-extralight tracking-[-0.02em] text-white/70 transition-colors duration-300 group-hover:text-white">
+                  {l.label}
+                </span>
+              </a>
+            ))}
+          </nav>
 
           <div
             style={{
-              transitionDelay: menuOpen ? `${100 + links.length * 60}ms` : "0ms",
+              transitionDelay: menuOpen ? `${80 + links.length * 50}ms` : "0ms",
               opacity: menuOpen ? 1 : 0,
-              transform: menuOpen ? "translateY(0)" : "translateY(30px)",
-              transitionProperty: "opacity, transform",
-              transitionDuration: "0.4s",
+              transitionProperty: "opacity",
+              transitionDuration: "0.35s",
               transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
             }}
-            className="mt-6 h-px w-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+            className="my-8 h-px w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent"
           />
 
           <a
             href="#contact"
-            className="mt-6 rounded-full border border-white/15 bg-white/5 px-8 py-3 text-xs uppercase tracking-[0.25em] text-white/60 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white"
+            className="self-start rounded-full border border-white/15 bg-white/5 px-7 py-2.5 text-xs uppercase tracking-[0.2em] text-white/60 transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white"
             style={{
-              transitionDelay: menuOpen ? `${100 + (links.length + 1) * 60}ms` : "0ms",
+              transitionDelay: menuOpen ? `${80 + (links.length + 1) * 50}ms` : "0ms",
               opacity: menuOpen ? 1 : 0,
-              transform: menuOpen ? "translateY(0)" : "translateY(30px)",
+              transform: menuOpen ? "translateY(0)" : "translateY(10px)",
               transitionProperty: "opacity, transform, border-color, background, color",
-              transitionDuration: "0.4s",
+              transitionDuration: "0.35s",
               transitionTimingFunction: "cubic-bezier(0.4,0,0.2,1)",
             }}
             onClick={() => setMenuOpen(false)}
           >
             Fale Comigo
           </a>
-        </nav>
+        </div>
       </div>
     </header>
   );
