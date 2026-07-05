@@ -65,26 +65,26 @@ export function HeroMobile() {
       />
       <div className="chapter-grade" aria-hidden="true" />
 
-      <div className="absolute inset-x-0 bottom-0 top-[48%] z-10 mx-auto flex flex-col items-center justify-end pb-16 px-6 text-center">
+      <div className="absolute inset-x-0 bottom-0 top-[50%] z-10 mx-auto flex flex-col items-center justify-end pb-14 px-5 text-center">
         <span className="hero-badge chip">
           <span className="chip__dot" /> Full Stack Developer
         </span>
 
-        <h1 className="hero-title hero-split mt-3 font-display text-[clamp(2.5rem,9vw,9rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
+        <h1 className="hero-title hero-split mt-2 font-display text-[clamp(2rem,8vw,9rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
           Pedro Chalegre
         </h1>
 
-        <h2 className="hero-fade mt-3 max-w-[90%] font-display text-[clamp(1rem,4vw,2rem)] font-light italic leading-[1.1] tracking-[-0.02em] text-white/92">
+        <h2 className="hero-fade mt-2 max-w-[90%] font-display text-[clamp(0.85rem,3.5vw,2rem)] font-light italic leading-[1.1] tracking-[-0.02em] text-white/92">
           Transformando ideias em experiências digitais de alta performance.
         </h2>
 
-        <p className="hero-fade mt-3 max-w-[90%] text-[13px] leading-5 text-white/60">
+        <p className="hero-fade mt-2 max-w-[90%] text-[12px] leading-[1.3] text-white/60">
           Desenvolvedor Full Stack especializado na criação de aplicações
           modernas, interfaces sofisticadas e experiências digitais que
           unem performance, design e inovação.
         </p>
 
-        <div className="hero-fade mt-4 flex w-full flex-col gap-2">
+        <div className="hero-fade mt-3 flex w-full flex-col gap-2">
           <MagneticButton href="#projects" variant="primary" className="w-full">
             Ver Projetos
           </MagneticButton>
