@@ -5,6 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Scroll to top immediately on page load (before React mounts)
+if (typeof window !== "undefined") {
+  window.history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+}
+
 let lenisInstance: Lenis | null = null;
 
 export function getLenis() {
@@ -14,6 +20,8 @@ export function getLenis() {
 export function useSmoothScroll() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
