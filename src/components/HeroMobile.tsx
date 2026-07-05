@@ -61,30 +61,30 @@ export function HeroMobile() {
         preload="metadata"
         autoPlay
         loop
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[center_15%]"
       />
       <div className="chapter-grade" aria-hidden="true" />
 
-      <div className="absolute inset-x-0 bottom-0 top-[40%] z-10 mx-auto flex flex-col items-center justify-end pb-20 px-6 text-center">
+      <div className="absolute inset-x-0 bottom-0 top-[42%] z-10 mx-auto flex flex-col items-center justify-end pb-16 px-6 text-center">
         <span className="hero-badge chip">
           <span className="chip__dot" /> Full Stack Developer
         </span>
 
-        <h1 className="hero-title hero-split mt-5 font-display text-[clamp(2.5rem,9vw,9rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
+        <h1 className="hero-title hero-split mt-3 font-display text-[clamp(2.5rem,9vw,9rem)] font-light leading-[0.85] tracking-[-0.03em] text-white">
           Pedro Chalegre
         </h1>
 
-        <h2 className="hero-fade mt-5 max-w-[90%] font-display text-[clamp(1rem,4vw,2rem)] font-light italic leading-[1.1] tracking-[-0.02em] text-white/92">
+        <h2 className="hero-fade mt-3 max-w-[90%] font-display text-[clamp(1rem,4vw,2rem)] font-light italic leading-[1.1] tracking-[-0.02em] text-white/92">
           Transformando ideias em experiências digitais de alta performance.
         </h2>
 
-        <p className="hero-fade mt-4 max-w-[90%] text-[14px] leading-6 text-white/60">
+        <p className="hero-fade mt-3 max-w-[90%] text-[13px] leading-5 text-white/60">
           Desenvolvedor Full Stack especializado na criação de aplicações
           modernas, interfaces sofisticadas e experiências digitais que
           unem performance, design e inovação.
         </p>
 
-        <div className="hero-fade mt-6 flex w-full flex-col gap-3">
+        <div className="hero-fade mt-4 flex w-full flex-col gap-2">
           <MagneticButton href="#projects" variant="primary" className="w-full">
             Ver Projetos
           </MagneticButton>
