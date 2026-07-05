@@ -14,7 +14,8 @@ export function HeroMobile() {
     video.muted = true;
     video.setAttribute("playsinline", "");
     video.preload = "metadata";
-    video.loop = false;
+    video.loop = true;
+    video.play().catch(() => {});
 
     // Split text
     gsap.utils.toArray<HTMLElement>(".hero-split").forEach(splitToChars);
@@ -58,7 +59,9 @@ export function HeroMobile() {
         muted
         playsInline
         preload="metadata"
-        className="absolute inset-0 h-full w-full object-cover object-[78%_center]"
+        autoPlay
+        loop
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div className="chapter-grade" aria-hidden="true" />
 
