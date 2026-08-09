@@ -3,6 +3,8 @@ const path = require('path');
 
 const projects = [
   { name: 'c4odonto', url: 'https://c4odonto.com.br/' },
+  { name: 'cyber-future', url: 'https://cyberfuturescroll.netlify.app/' },
+  { name: 'samurai-bushido', url: 'https://samuraibushido.netlify.app/' },
   { name: 'atelier-premium', url: 'https://atelierpremium.netlify.app' },
   { name: 'grupolmb', url: 'https://grupolmb.com.br/' },
   { name: 'prlmb', url: 'https://prlmb.grupolmb.com.br/' },

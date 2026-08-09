@@ -74,6 +74,28 @@ export const projects: Project[] = [
   },
   {
     number: "02",
+    name: "Cyber Future",
+    description:
+      "Experiência scroll-driven cyberpunk com scrubbing de cenas animadas. Universo futurista com estética neon, transições cinematográficas e interatividade via scroll.",
+    tech: ["React", "GSAP", "Scroll Trigger", "TypeScript", "Tailwind CSS"],
+    year: "2026",
+    image: "/cyber-future.png",
+    live: "https://cyberfuturescroll.netlify.app/",
+    github: "https://github.com/PedroCahelgre",
+  },
+  {
+    number: "03",
+    name: "Samurai Bushido",
+    description:
+      "Experiência scroll-driven imersiva inspirada na arte e filosofia bushido. Animações cinematográficas, transições fluidas e design premium com estética japonesa autêntica.",
+    tech: ["React", "GSAP", "Scroll Trigger", "TypeScript", "Tailwind CSS"],
+    year: "2026",
+    image: "/samurai-bushido.png",
+    live: "https://samuraibushido.netlify.app/",
+    github: "https://github.com/PedroCahelgre",
+  },
+  {
+    number: "04",
     name: "Atelier Premium",
     description:
       "Website premium para salão de beleza. Plataforma elegante com catálogo de serviços, agendamento online, galeria de trabalhos e informações sobre tratamentos de beleza personalizados.",
@@ -84,7 +106,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "03",
+    number: "05",
     name: "LMB Engenharia",
     description:
       "Website corporativo para construtora especializada em obras comerciais no Brasil. +600 entregas desde 2006 no modelo chave na mão.",
@@ -95,7 +117,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "04",
+    number: "06",
     name: "PR LMB",
     description:
       "Sistema corporativo interno do Grupo LMB para gerenciamento de chamados, ordens de serviço e documentação técnica. Plataforma segura com autenticação e dashboard administrativo.",
@@ -106,7 +128,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "05",
+    number: "07",
     name: "Art Sapiens Tattoo Studio",
     description:
       "Website institucional para estúdio de tatuagem com mais de 30 anos de experiência em Recife. Galeria de trabalhos, agendamento online e informações sobre serviços.",
@@ -117,7 +139,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "06",
+    number: "08",
     name: "Barbearia Meus Manos",
     description:
       "Website moderno para barbearia com agendamento online, galeria de cortes e serviços. Experiência mobile-first com integração direta ao WhatsApp.",
@@ -128,7 +150,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "07",
+    number: "09",
     name: "Feijoada das Pretas",
     description:
       "Cardápio digital para delivery de feijoada artesanal em Jaboatão. Experiência mobile-first com pedidos online via WhatsApp.",
@@ -139,7 +161,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "08",
+    number: "10",
     name: "GSAP & Scroll Trigger",
     description:
       "Projeto de estudo e demonstração das bibliotecas GSAP e Scroll Trigger. Criação de animações avançadas e efeitos de scroll interativos em uma landing page.",
@@ -150,7 +172,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "09",
+    number: "11",
     name: "Clenia Medeiros Imóveis",
     description:
       "Plataforma imobiliária especializada em imóveis de luxo no litoral pernambucano. Sistema de busca, galeria de propriedades e contato direto com a corretora.",
@@ -161,7 +183,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "10",
+    number: "12",
     name: "Jackson Menezes - Marketing Digital",
     description:
       "Website de serviços de marketing digital especializado em negócios locais. Oferece gestão de tráfego pago, criação de sites focados em conversão e otimização do Google Meu Negócio.",
@@ -172,7 +194,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "11",
+    number: "13",
     name: "Meus Manos Barber",
     description:
       "Website para barbearia tradicional com foco em cortes masculinos e tratamentos de barba. Galeria de trabalhos, preços e agendamento online.",
@@ -183,7 +205,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "12",
+    number: "14",
     name: "Matheus Silva Barber",
     description:
       "Portfolio profissional de barbeiro com mais de 8 anos de experiência. Showcase de serviços, preços e sistema de agendamento personalizado.",
@@ -194,7 +216,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "13",
+    number: "15",
     name: "Chalegre Energy",
     description:
       "Website para empresa de serviços elétricos atendendo Recife, Jaboatão e Olinda. Catálogo de serviços, área de cobertura e formulário de orçamento.",
@@ -205,7 +227,7 @@ export const projects: Project[] = [
     github: "https://github.com/PedroCahelgre",
   },
   {
-    number: "14",
+    number: "16",
     name: "TVG Engenharia",
     description:
       "Website corporativo para empresa de engenharia especializada em construção e manutenção de postos de combustível. Portfolio de projetos e serviços.",
