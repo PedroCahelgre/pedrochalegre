@@ -258,6 +258,17 @@ export const projects: Project[] = [
     image: "/tvg.png",
     live: "https://tvgengenharia.com.br",
     github: "https://github.com/PedroCahelgre",
+  },
+  {
+    number: "19",
+    name: "Nexora Studio - Aurvon H700",
+    description:
+      "Website premium para fone de ouvido de alta performance. Experiência cinematográfica com design futurista, animações suaves e foco em produto.",
+    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    year: "2026",
+    image: "/nexora-studio.png",
+    live: "https://headphone-six-flax.vercel.app/",
+    github: "https://github.com/PedroCahelgre",
   }
 ];
 
