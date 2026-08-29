@@ -41,13 +41,19 @@
     <meta name="twitter:image" content="https://pedrochalegre.netlify.app/og-image.png" />
     <meta name="twitter:image:alt" content="Pedro Chalegre — Desenvolvedor Full Stack — Criação de Sites Profissionais" />
 
-    <!-- Fonts -->
+    <!-- Fonts - otimizado com display=swap e preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+    <!-- Preconnect para Cloudinary (vídeos) -->
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

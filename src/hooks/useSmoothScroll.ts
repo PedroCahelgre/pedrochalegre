@@ -26,12 +26,23 @@ export function useSmoothScroll() {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
+    // Desativa Lenis em dispositivos touch / telas pequenas para economizar CPU e bateria
+    const isTouch = window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 1024;
+    if (isTouch) return;
+
+    const isLowEnd =
+      (navigator as unknown as { deviceMemory?: number }).deviceMemory !== undefined &&
+      (navigator as unknown as { deviceMemory: number }).deviceMemory <= 4;
+    // Em dispositivos com pouca memória, usa duração menor
+    const duration = isLowEnd ? 0.9 : 1.25;
+
     const lenis = new Lenis({
-      duration: 1.25,
+      duration,
       easing: (t: number) => Math.min(1, 1.001 - 2 ** (-10 * t)),
       smoothWheel: true,
       wheelMultiplier: 0.92,
       touchMultiplier: 1.4,
+      gestureOrientation: "vertical",
     });
     lenisInstance = lenis;
 

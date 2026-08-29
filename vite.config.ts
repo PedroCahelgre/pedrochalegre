@@ -16,4 +16,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    target: "esnext",
+    cssMinify: true,
+    minify: "esbuild",
+    assetsInlineLimit: 4096,
+  },
 });

@@ -8,24 +8,7 @@ const links = [
 ];
 
 export function Nav() {
-  const [state, setState] = useState<"hero" | "transition" | "scrolled">("hero");
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      if (y < 80) {
-        setState("hero");
-      } else if (y < window.innerHeight * 0.6) {
-        setState("transition");
-      } else {
-        setState("scrolled");
-      }
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (menuOpen) {
@@ -38,12 +21,7 @@ export function Nav() {
     };
   }, [menuOpen]);
 
-  const cls =
-    state === "hero"
-      ? "nav-shell"
-      : state === "transition"
-        ? "nav-shell"
-        : "nav-shell is-scrolled";
+  const cls = "nav-shell";
 
   return (
     <>

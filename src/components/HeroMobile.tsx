@@ -13,7 +13,7 @@ export function HeroMobile() {
 
     video.muted = true;
     video.setAttribute("playsinline", "");
-    video.preload = "metadata";
+    video.preload = "auto";
     video.loop = true;
     video.play().catch(() => {});
 
@@ -58,7 +58,7 @@ export function HeroMobile() {
         src={VIDEOS.hero}
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
         autoPlay
         loop
         className="absolute inset-0 h-full w-full object-cover object-[center_5%]"

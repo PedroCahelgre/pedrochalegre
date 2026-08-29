@@ -18,7 +18,7 @@ export function HeroDesktop() {
 
     video.muted = true;
     video.setAttribute("playsinline", "");
-    video.preload = "metadata";
+    video.preload = "auto";
     video.loop = false;
     video.style.cssText =
       "position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;will-change:transform;transform:translateZ(0);";
@@ -134,7 +134,7 @@ export function HeroDesktop() {
           src={VIDEOS.hero}
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           className="hero-video"
         />
         <div className="chapter-grade" aria-hidden="true" />

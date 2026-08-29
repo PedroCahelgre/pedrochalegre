@@ -27,8 +27,10 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={`Preview do projeto ${project.name}`}
-                  loading={i === 0 ? "eager" : "lazy"}
+                  loading={i < 2 ? "eager" : "lazy"}
                   decoding="async"
+                  width={1200}
+                  height={800}
                 />
               </div>
 
