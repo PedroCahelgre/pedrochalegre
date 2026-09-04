@@ -269,6 +269,17 @@ export const projects: Project[] = [
     image: "/nexora-studio.png",
     live: "https://headphone-six-flax.vercel.app/",
     github: "https://github.com/PedroCahelgre",
+  },
+  {
+    number: "20",
+    name: "Studio Paloma Unhas",
+    description:
+      "Website institucional para Studio Paloma, especializado em manicure e pedicure em Sorocaba. Design delicado com catálogo de serviços, agendamento online via WhatsApp e identidade visual sofisticada.",
+    tech: ["Next.js", "Tailwind CSS", "TypeScript", "WhatsApp API"],
+    year: "2026",
+    image: "/studio-paloma.png",
+    live: "https://studiopalomaunhas.vercel.app/",
+    github: "https://github.com/PedroCahelgre",
   }
 ];
 
@@ -281,7 +292,7 @@ export type Metric = {
 };
 
 export const metrics: Metric[] = [
-  { value: 30, prefix: "+", suffix: "", label: "Projetos entregues" },
+  { value: 31, prefix: "+", suffix: "", label: "Projetos entregues" },
   { value: 95, prefix: "", suffix: "+", label: "Lighthouse Score" },
   { value: 100, prefix: "", suffix: "%", label: "Responsivo" },
   { value: 0, prefix: "", suffix: "", label: "Clean Code", word: "A+" },
