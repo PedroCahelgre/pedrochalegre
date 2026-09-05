@@ -29,7 +29,7 @@ export function Nav() {
         <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-3 sm:px-8 sm:py-4 md:px-10">
           <a href="#hero" className="nav-brand" onClick={() => setMenuOpen(false)}>
             <div className="flex items-center gap-2 sm:gap-3">
-              <img src="/logo.jpeg" alt="PC" className="h-8 w-8 rounded object-cover sm:h-10 sm:w-10" />
+              <img src="/logo.jpeg" alt="PC" width={40} height={40} decoding="async" className="h-8 w-8 rounded object-cover sm:h-10 sm:w-10" />
               <div className="flex flex-col">
                 <span className="font-display text-sm tracking-[-0.01em] sm:text-lg">Pedro Chalegre</span>
                 <span className="nav-brand__role">Full Stack Developer</span>
@@ -81,7 +81,7 @@ export function Nav() {
       >
         <div className="flex h-16 items-center justify-between px-5">
           <a href="#hero" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
-            <img src="/logo.jpeg" alt="PC" className="h-8 w-8 rounded object-cover" />
+            <img src="/logo.jpeg" alt="PC" width={32} height={32} decoding="async" className="h-8 w-8 rounded object-cover" />
             <span className="font-display text-sm tracking-[-0.01em]">Pedro Chalegre</span>
           </a>
           <button

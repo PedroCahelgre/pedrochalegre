@@ -1,10 +1,28 @@
+import { useEffect, useRef } from "react";
 import { VIDEOS, skillGroups } from "../data";
 
 export function Expertise() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { threshold: 0.15 },
+    );
+    io.observe(video);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section id="expertise" className="relative overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           className="h-full w-full object-cover opacity-70"
           src={VIDEOS.expertise}
           autoPlay

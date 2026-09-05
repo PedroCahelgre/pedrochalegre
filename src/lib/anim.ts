@@ -44,6 +44,7 @@ export function tiltMove(event: PointerEvent<HTMLElement>) {
     "--my": `${(y + 0.5) * 100}%`,
     duration: 0.5,
     ease: "power2.out",
+    overwrite: "auto",
   });
 }
 
@@ -55,6 +56,7 @@ export function tiltReset(event: PointerEvent<HTMLElement>) {
     "--my": "50%",
     duration: 0.7,
     ease: "power3.out",
+    overwrite: "auto",
   });
 }
 
@@ -64,11 +66,11 @@ export function magnetMove(event: PointerEvent<HTMLElement>, strength = 0.32) {
   const rect = el.getBoundingClientRect();
   const x = (event.clientX - rect.left - rect.width / 2) * strength;
   const y = (event.clientY - rect.top - rect.height / 2) * strength;
-  gsap.to(el, { x, y, duration: 0.5, ease: "power3.out" });
+  gsap.to(el, { x, y, duration: 0.5, ease: "power3.out", overwrite: "auto" });
 }
 
 export function magnetReset(event: PointerEvent<HTMLElement>) {
-  gsap.to(event.currentTarget, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.4)" });
+  gsap.to(event.currentTarget, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.4)", overwrite: "auto" });
 }
 
 export type ParticleStyle = CSSProperties & Record<string, string>;

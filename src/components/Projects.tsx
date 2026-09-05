@@ -28,6 +28,7 @@ export function Projects() {
                   src={project.image}
                   alt={`Preview do projeto ${project.name}`}
                   loading={i < 2 ? "eager" : "lazy"}
+                  fetchPriority={i === 0 ? "high" : "auto"}
                   decoding="async"
                   width={1200}
                   height={800}

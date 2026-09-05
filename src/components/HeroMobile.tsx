@@ -48,6 +48,7 @@ export function HeroMobile() {
 
     return () => {
       tl.kill();
+      video.pause();
     };
   }, []);
 

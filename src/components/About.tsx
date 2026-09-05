@@ -1,10 +1,11 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { VIDEOS, metrics } from "../data";
 import { splitToChars } from "../lib/anim";
 
 export function About() {
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useLayoutEffect(() => {
     const el = ref.current;
@@ -90,6 +91,20 @@ export function About() {
     return () => c.revert();
   }, []);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { threshold: 0.15 },
+    );
+    io.observe(video);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section ref={ref} id="about" className="relative overflow-hidden bg-black">
       <div className="relative mx-auto grid max-w-[1400px] gap-10 px-5 py-20 sm:px-8 sm:py-28 md:grid-cols-[1fr_0.9fr] md:items-center md:gap-14 md:px-10 md:py-40">
@@ -133,6 +148,7 @@ export function About() {
 
         <div className="about-frame">
           <video
+            ref={videoRef}
             className="about-media"
             src={VIDEOS.about}
             autoPlay

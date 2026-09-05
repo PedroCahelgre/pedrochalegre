@@ -12,9 +12,11 @@ export function HeroDesktop() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useLayoutEffect(() => {
-    const section = sectionRef.current;
-    const video = videoRef.current;
-    if (!section || !video) return;
+    const sectionEl = sectionRef.current;
+    const videoEl = videoRef.current;
+    if (!sectionEl || !videoEl) return;
+    const section: HTMLElement = sectionEl;
+    const video: HTMLVideoElement = videoEl;
 
     video.muted = true;
     video.setAttribute("playsinline", "");
@@ -27,24 +29,32 @@ export function HeroDesktop() {
     let lastSeek = 0;
     let targetTime = 0;
     let ticking = false;
+    let rafId = 0;
+    let cachedTotal = Math.max(0, section.offsetHeight - window.innerHeight);
+
+    function measure() {
+      cachedTotal = Math.max(0, section.offsetHeight - window.innerHeight);
+    }
 
     function applySeek(now: number) {
       ticking = false;
+      rafId = 0;
       if (now - lastSeek < 80) return;
       if (Math.abs(video.currentTime - targetTime) > 0.05) {
-        video.currentTime = targetTime;
+        const v = video as HTMLVideoElement & { fastSeek?: (t: number) => void };
+        if (typeof v.fastSeek === "function") v.fastSeek(targetTime);
+        else video.currentTime = targetTime;
         lastSeek = now;
       }
     }
 
     function onScroll() {
       if (!duration) return;
-      const total = section.offsetHeight - window.innerHeight;
-      const p = total > 0 ? Math.min(1, Math.max(0, window.scrollY / total)) : 0;
+      const p = cachedTotal > 0 ? Math.min(1, Math.max(0, window.scrollY / cachedTotal)) : 0;
       targetTime = p * duration;
       if (!ticking) {
         ticking = true;
-        requestAnimationFrame(applySeek);
+        rafId = requestAnimationFrame(applySeek);
       }
     }
 
@@ -59,6 +69,8 @@ export function HeroDesktop() {
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", measure, { passive: true });
+    measure();
 
     if (video.readyState >= 1) {
       onDuration();
@@ -116,8 +128,12 @@ export function HeroDesktop() {
 
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", measure);
       video.removeEventListener("loadedmetadata", onDuration);
+      if (rafId) cancelAnimationFrame(rafId);
+      video.pause();
       intro.kill();
+      exit.scrollTrigger?.kill();
       exit.kill();
     };
   }, []);

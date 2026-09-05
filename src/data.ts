@@ -1,10 +1,10 @@
 export const VIDEOS = {
-  hero: "https://res.cloudinary.com/dcfkufr9h/video/upload/v1783207176/Man_in_confident_pose_202607041609_online-video-cutter.com_ldojib.mp4",
+  hero: "https://res.cloudinary.com/dcfkufr9h/video/upload/f_auto,q_auto,vc_auto,w_1280/v1783207176/Man_in_confident_pose_202607041609_online-video-cutter.com_ldojib.mp4",
   about:
-    "https://res.cloudinary.com/dcfkufr9h/video/upload/v1783192198/Man_in_confident_pose_202607041609_avzgg0.mp4",
+    "https://res.cloudinary.com/dcfkufr9h/video/upload/f_auto,q_auto,vc_auto,w_960/v1783192198/Man_in_confident_pose_202607041609_avzgg0.mp4",
   expertise:
-    "https://res.cloudinary.com/dcfkufr9h/video/upload/v1783193651/Man_walking_in_hallway_202607041633_bnqnrq.mp4",
-  cta: "https://res.cloudinary.com/dcfkufr9h/video/upload/v1783210233/Man_walking_in_corridor_smiling_202607041735_online-video-cutter.com_wgmzxk.mp4",
+    "https://res.cloudinary.com/dcfkufr9h/video/upload/f_auto,q_auto,vc_auto,w_1280/v1783193651/Man_walking_in_hallway_202607041633_bnqnrq.mp4",
+  cta: "https://res.cloudinary.com/dcfkufr9h/video/upload/f_auto,q_auto,vc_auto,w_960/v1783210233/Man_walking_in_corridor_smiling_202607041735_online-video-cutter.com_wgmzxk.mp4",
 } as const;
 
 export const SOCIAL = {

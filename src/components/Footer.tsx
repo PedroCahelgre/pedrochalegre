@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col gap-10 sm:gap-16 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3 sm:space-y-5">
             <div className="flex items-center gap-3 sm:gap-4">
-              <img src="/logo.jpeg" alt="PC" className="h-10 w-10 rounded-xl object-cover ring-1 ring-white/10 sm:h-14 sm:w-14" />
+              <img src="/logo.jpeg" alt="PC" width={56} height={56} loading="lazy" decoding="async" className="h-10 w-10 rounded-xl object-cover ring-1 ring-white/10 sm:h-14 sm:w-14" />
               <div className="h-10 w-px bg-gradient-to-b from-blue-500/50 to-transparent sm:h-12" />
             </div>
             <h2 className="font-display text-[clamp(1.6rem,5vw,5rem)] font-light leading-[0.9] tracking-[-0.03em] text-white">

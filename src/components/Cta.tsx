@@ -51,21 +51,36 @@ export function Cta() {
       const isSmile = p > 0.66;
       if (isSmile !== smiling) {
         smiling = isSmile;
-        gsap.to(".cta-glow", { opacity: isSmile ? 1 : 0.25, scale: isSmile ? 1.12 : 1, duration: 1.2, ease: "power2.out" });
-        gsap.to(".cta-particles", { opacity: isSmile ? 1 : 0, duration: 1.2, ease: "power2.out" });
+        gsap.to(".cta-glow", { opacity: isSmile ? 1 : 0.25, scale: isSmile ? 1.12 : 1, duration: 1.2, ease: "power2.out", overwrite: "auto" });
+        gsap.to(".cta-particles", { opacity: isSmile ? 1 : 0, duration: 1.2, ease: "power2.out", overwrite: "auto" });
         gsap.to(".cta-actions .magnetic", {
           borderColor: isSmile ? "rgba(59,130,246,0.7)" : "rgba(255,255,255,0.16)",
           duration: 0.8,
           stagger: 0.06,
           ease: "power2.out",
+          overwrite: "auto",
         });
       }
     };
     video?.addEventListener("timeupdate", onTime);
 
+    const vid = videoRef.current;
+    let io: IntersectionObserver | null = null;
+    if (vid && "IntersectionObserver" in window) {
+      io = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) vid.play().catch(() => {});
+          else vid.pause();
+        },
+        { threshold: 0.15 },
+      );
+      io.observe(el);
+    }
+
     return () => {
       c.revert();
       video?.removeEventListener("timeupdate", onTime);
+      io?.disconnect();
     };
   }, []);
 
