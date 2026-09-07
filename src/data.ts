@@ -8,7 +8,7 @@ export const VIDEOS = {
 } as const;
 
 export const SOCIAL = {
-  github: "https://github.com/PedroCahelgre",
+  github: "https://github.com/PedroChalegre",
   linkedin: "https://www.linkedin.com/in/pedrochalegre/",
   instagram: "https://www.instagram.com/chalegredev",
   whatsapp: "https://wa.me/5512992515171?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/c4odonto.png",
     live: "https://c4odonto.com.br/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "02",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/grupolmb.png",
     live: "https://grupolmb.com.br/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "03",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/cyber-future.png",
     live: "https://cyberfuturescroll.netlify.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "04",
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/prlmb.png",
     live: "https://prlmb.grupolmb.com.br/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "05",
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/art-sapiens.png",
     live: "https://artsapiens.com.br/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "06",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/barbearia-meus-manos.png",
     live: "https://barbeariameusmanos.vercel.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "07",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/studio-paloma.png",
     live: "https://studiopalomaunhas.vercel.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "08",
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/beyond-two.png",
     live: "https://beyond-two-gamma.vercel.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "09",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     year: "2024",
     image: "/tvg.png",
     live: "https://tvgengenharia.com.br",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "10",
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     year: "2024",
     image: "/feijoadadaspretas.png",
     live: "https://feijoadadaspretas.netlify.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "11",
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/coffe-final.png",
     live: "https://coffe-final.vercel.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "12",
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/samurai-bushido.png",
     live: "https://samuraibushido.netlify.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "13",
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/atelier-premium.png",
     live: "https://atelierpremium.netlify.app",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "14",
@@ -213,7 +213,7 @@ export const projects: Project[] = [
     year: "2024",
     image: "/gsap-scroll.png",
     live: "https://testegeladeira.vercel.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "15",
@@ -224,7 +224,7 @@ export const projects: Project[] = [
     year: "2025",
     image: "/clenia-imoveis.png",
     live: "https://cleniamedeirosimoveis.netlify.app",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "16",
@@ -235,7 +235,7 @@ export const projects: Project[] = [
     year: "2025",
     image: "/jackson-menezes.png",
     live: "https://jacksonmenezes.netlify.app",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "17",
@@ -246,7 +246,7 @@ export const projects: Project[] = [
     year: "2024",
     image: "/meus-manos-barber.png",
     live: "https://meusmanosbarber.netlify.app",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "18",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
     year: "2024",
     image: "/matheus-silva.png",
     live: "https://msthebarber.netlify.app",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "19",
@@ -268,7 +268,7 @@ export const projects: Project[] = [
     year: "2025",
     image: "/chalegre-energy.png",
     live: "https://chalegreenergy.netlify.app",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   },
   {
     number: "20",
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/nexora-studio.png",
     live: "https://headphone-six-flax.vercel.app/",
-    github: "https://github.com/PedroCahelgre",
+    github: "https://github.com/PedroChalegre",
   }
 ];
 
